@@ -1,15 +1,13 @@
 vim.o.termguicolors = true
-vim.o.number = true
 vim.o.relativenumber = true
 vim.o.wrap = false
 vim.o.swapfile = false
 vim.g.mapleader = " "
 vim.o.signcolumn = "yes"
 vim.opt.scrolloff = 8
-vim.opt.sidescrolloff = 8
 vim.opt.hlsearch = false
 vim.opt.completeopt = { "menuone", "noselect", "popup" }
--- vim.opt.winborder = 'rounded'
+vim.opt.mouse =  ""
 
 vim.lsp.enable({ "lua_ls", "clangd" })
 vim.cmd.colorscheme('everforest')
@@ -19,12 +17,16 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>ff", "ggVG=")
 vim.keymap.set('n', '<leader><leader>', ":Pick files<CR>")
 vim.keymap.set('n', '<leader>xh', ":Pick help<CR>")
+vim.keymap.set('n', '<leader>xx', ":Pick diagnostic<CR>")
 
 vim.pack.add({
-	"cohama/lexima.vim",
 	{ src = 'echasnovski/mini.pick', version = '*' },
+	{ src = 'echasnovski/mini.extra', version = '*' },
+	{ src = 'echasnovski/mini.pairs', version = '*' },
 	{ src = "saghen/blink.cmp", version = "v1.*" },
 })
 
 require('mini.pick').setup()
+require('mini.extra').setup()
+require('mini.pairs').setup()
 require("blink.cmp").setup()
