@@ -1,3 +1,19 @@
+-- local pack_add = function(specs)
+--   local norm_specs = {}
+--   for i, s in ipairs(specs) do
+--     if type(s) == 'string' then s = { src = s } end
+--     if s.src:find('^[%w-]+/[%w-_.]+$') ~= nil then s.src = 'https://github.com/' .. s.src end
+--     norm_specs[i] = s
+--   end
+
+--   vim.pack.add(norm_specs)
+-- end
+
+-- pack_add({
+--   'echasnovski/mini.pick',
+--   'echasnovski/mini.files',
+-- })
+
 vim.o.termguicolors = true
 vim.o.relativenumber = true
 vim.o.wrap = false
