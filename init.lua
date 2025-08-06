@@ -35,7 +35,7 @@ vim.keymap.set('n', '<leader><leader>', ":Pick files<CR>")
 vim.keymap.set('n', '<leader>xh', ":Pick help<CR>")
 vim.keymap.set('n', '<leader>xx', ":Pick diagnostic<CR>")
 
-vim.pack.add({
+pack_add({
 	{ src = 'echasnovski/mini.pick', version = '*' },
 	{ src = 'echasnovski/mini.extra', version = '*' },
 	{ src = 'echasnovski/mini.pairs', version = '*' },
